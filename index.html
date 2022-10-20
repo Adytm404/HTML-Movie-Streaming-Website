@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Streaming Film</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Start Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <div class="container text-center">
+                <div class="column-5 tcolor-black">
+                    <h3>All</h3>
+                </div>
+                <div class="column-5 tcolor-grey">
+                    <h3>Movie</h3>
+                </div>
+                <div class="column-5 tcolor-grey">
+                    <h3>Series</h3>
+                </div>
+                <div class="column-5 tcolor-grey">
+                    <h3>TV</h3>
+                </div>
+                <div class="column-5 tcolor-grey">
+                    <h3>Cartoons</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+    <!-- Main Title -->
+    <div class="container">
+        <h2><strong>Recomended</strong> to you</h2>
+        <div class="slideshow-container">
+            <div class="mySlides1 roundframe">
+                <img class="image" src="./image/luca-banner.jpg" alt="">
+            </div>
+            <div class="mySlides1 roundframe">
+                <img class="image" src="./image/moana-banner.jpg" alt="">
+            </div>
+            <div class="mySlides1 roundframe">
+                <img class="image" src="./image/big-hero.jpg" alt="">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+    </div>
+    <!-- End Main Title -->
+    <!-- Second Title -->
+    <div class="container">
+        <div class="column-2">
+            <h3><strong>Most</strong> popular</h3>
+        </div>
+        <div class="column-2">
+            <a href="./">
+                <h3 class="tcolor-blue" style="text-align: right;" >View More</h3>
+            </a>
+        </div>
+        <!-- Start list movie -->
+        <div class="text-center">
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/1.jpg">
+                </a>
+                    <h4>TinkerBell</h4>
+            </div>
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/2.jpg">
+                </a>
+                <h4>Secret Wings</h4>
+            </div>
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/3.png">
+                </a>
+                <h4>Luca</h4>
+            </div>
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/4.png">
+                </a>
+                <h4>Angry Bird</h4>
+            </div>
+        </div>
+        <!-- End list movie -->
+    </div>
+    <!-- End Second Title -->
+    <!-- Second Title -->
+    <div class="container">
+        <div class="column-2">
+            <h3><strong>Most</strong> popular</h3>
+        </div>
+        <div class="column-2">
+            <a href="./">
+                <h3 class="tcolor-blue"     style="text-align: right;">View More</h3>
+            </a>
+        </div>
+        <!-- Start list movie -->
+        <div class="text-center">
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/5.jpg">
+                </a>
+                <h4>Zootopia</h4>
+            </div>
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/6.jpg">
+                </a>
+                <h4>Princess Frog</h4>
+            </div>
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/7.jpg">
+                </a>
+                <h4>Flushed Away</h4>
+            </div>
+            <div class="column-4">
+                <a href="./stream.html">
+                    <img class="center img-vert roundframe" src="./image/8.jpg">
+                </a>
+                <h4>Howl's Moving Castle</h4>
+            </div>
+        </div>
+        <!-- End list movie -->
+    </div>
+    <!-- End Second Title -->
+
+
+    <script>
+        let slideIndex = [1,1];
+        let slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+        
+        function plusSlides(n, no) {
+          showSlides(slideIndex[no] += n, no);
+        }
+        
+        function showSlides(n, no) {
+          let i;
+          let x = document.getElementsByClassName(slideId[no]);
+          if (n > x.length) {slideIndex[no] = 1}    
+          if (n < 1) {slideIndex[no] = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex[no]-1].style.display = "block";  
+        }
+        </script>
+</body>
+</html>
